@@ -3,16 +3,15 @@
 (function(module) {
   var restaurant = {}
   restaurant.allRestaurants = [];
-  restaurant.queryParams = {term: 'restaurants', location: geoLocation.formattedAddress};
 
-  restaurant.requestRestaurants = function(callback){
+
+  restaurant.requestRestaurants = function(){
+    restaurant.queryParams = {term: 'restaurants', location: geoLocation.formattedAddress};
     $.get('/requestYelpRestaurants', restaurant.queryParams, function(data){
       restaurant.allRestaurants = data.businesses;
-      console.log(restaurant.allRestaurants);
+      restaurantView.renderObject(restaurant.allRestaurants, '#restList','#rest-template');
     });
-  }
-
-  restaurant.requestRestaurant();
+  };
 
   module.restaurant = restaurant;
 })(window);
