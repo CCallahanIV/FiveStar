@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="styles/module.css">
 
     <!-- TEMPLATE SCRIPTS HERE -->
+    <script id="rest-template" type="text/x-handlebars-template">
+      <li>
+        <div class="rest_teaser">
+          <img src="{{snippet_img_url}}">
+          <h1>{{name}}</h1>
+          <p><a href="{{rating_img_url}}"></a></p>
+          <p>{{address}}</p>
+        </div>
+        <div class="rest_details">
+          <li>{{display-phone}}</li>
+          <li>{{map-url}}</li>
+          <li>{{url}}</li>
+        </div>
+      </li>
+    </script>
   </head>
   <body>
     <!-- WEBSITE GOES HERE -->
