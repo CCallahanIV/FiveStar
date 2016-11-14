@@ -10,9 +10,25 @@
     <link rel="stylesheet" href="styles/module.css">
 
     <!-- TEMPLATE SCRIPTS HERE -->
+    <script id="rest-template" type="text/x-handlebars-template">
+      <li>
+        <div class="rest_teaser">
+          <img src="{{snippet_img_url}}">
+          <h1>{{name}}</h1>
+          <p><a href="{{rating_img_url}}"></a></p>
+          <p>{{address}}</p>
+        </div>
+        <div class="rest_details">
+          <li>{{display-phone}}</li>
+          <li>{{map-url}}</li>
+          <li>{{url}}</li>
+        </div>
+      </li>
+    </script>
   </head>
   <body>
     <!-- WEBSITE GOES HERE -->
+<<<<<<< HEAD
 <div id="wrapper">
      <div id="headerwrap">
      <div id="header">
@@ -40,16 +56,22 @@
            </div>
            </div>
        </div>
+=======
+    <button type="button" id="goButton">GO BUTTON</button>
+    <ul id="restList">
+    </ul>
+
+
+>>>>>>> 1862c269716b87b0c5d85873917f758ea4406a40
   <!-- VENDOR SCRIPTS   -->
-    <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <!-- CONTROLLER SCRIPTS -->
 
   <!-- MODEL SCRIPTS -->
-
+  <script src="scripts/models/geoLocation.js"></script>
+  <script src="scripts/models/restaurant.js"></script>
   <!-- VIEW SCRIPTS -->
+  <script src="scripts/view/restaurantView.js"></script>
   </body>
 </html>
