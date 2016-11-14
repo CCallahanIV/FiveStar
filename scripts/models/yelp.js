@@ -3,4 +3,4 @@ var queryYelp = function (obj) {
     console.log(data);
   });
 };
-queryYelp({ term: 'restaurants', location: 'seattle'});
+// queryYelp({ term: 'restaurants', location: 'seattle'});
