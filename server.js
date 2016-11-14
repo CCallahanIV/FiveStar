@@ -7,11 +7,6 @@ var express = require('express'),
 
 app.use(express.static('./'));
 
-// app.get('*', function(request, response) {
-//   console.log('New request:', request.url);
-//   response.sendFile('index.html', {root: '.'});
-// });
-
 app.listen(port, function() {
   console.log('Server started on port ' + port + '!');
 });
@@ -24,7 +19,7 @@ var yelp = new Yelp({
 });
 
 
-app.get('/slim', function (req, res) {
+app.get('/requestYelpRestaurants', function (req, res) {
   var stuff = {};
   var params = (req._parsedUrl.query).split('&');
   params.forEach(function (string) {
@@ -39,6 +34,11 @@ app.get('/slim', function (req, res) {
   .catch(function (err) {
     console.error(err);
   });
+});
+
+app.get('*', function(request, response) {
+  console.log('New request:', request.url);
+  response.sendFile('index.html', {root: '.'});
 });
 
 // PROXY FORMAT STORED FOR REFERENCE, DELETE WHEN FINSISHED.
