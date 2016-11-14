@@ -13,15 +13,15 @@
     <script id="rest-template" type="text/x-handlebars-template">
       <li>
         <div class="rest_teaser">
-          <img src="{{snippet_img_url}}">
-          <h1>{{name}}</h1>
-          <p><a href="{{rating_img_url}}"></a></p>
-          <p>{{address}}</p>
+          <h1><a href="{{url}}">{{name}}</a></h1>
+          <img alt="restaurant image" src="{{img_url}}">
+          Rating: <img alt="rating" src="{{rating_img_url}}">
+          <p>{{display_address}}</p>
         </div>
         <div class="rest_details">
-          <li>{{display-phone}}</li>
-          <li>{{map-url}}</li>
-          <li>{{url}}</li>
+          Phone Number: {{display_phone}}
+          Categories: {{categories}}
+          <!-- <iframe>{{map_url}}</iframe> -->
         </div>
       </li>
     </script>

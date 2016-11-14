@@ -8,7 +8,8 @@
   restaurant.requestRestaurants = function(){
     restaurant.queryParams = {term: 'restaurants', location: geoLocation.formattedAddress};
     $.get('/requestYelpRestaurants', restaurant.queryParams, function(data){
-      restaurant.allRestaurants = data.businesses;
+      console.log(data);
+      restaurant.allRestaurants = data;
       restaurantView.renderObject(restaurant.allRestaurants, '#restList','#rest-template');
     });
   };
