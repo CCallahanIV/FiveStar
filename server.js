@@ -26,6 +26,7 @@ app.get('/requestYelpRestaurants', function (req, res) {
     var strArray = string.split('=');
     stuff[strArray[0]] = strArray[1];
   });
+  stuff.location = stuff.location.replace(/%20/g, ' ');
   yelp.search(stuff)
   .then(function (data) {
     res.send(data);
