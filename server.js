@@ -15,8 +15,6 @@ app.listen(port, function() {
   console.log('Server started on port ' + port + '!');
 });
 
-
-
 // PROXY FORMAT STORED FOR REFERENCE, DELETE WHEN FINSISHED.
 // var proxyGithub = function(request, response) {
 //   console.log('Routing GitHub request for', request.params[0]);

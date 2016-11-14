@@ -1,7 +1,7 @@
 /* Routing for single page web app*/
 
-page('/', articleController.reveal);
+page('/', homeController.reveal);
 page('/about', aboutController.reveal);
-page('/repos', repoController.reveal);
+page('/list', listController.reveal);
 
 page();
