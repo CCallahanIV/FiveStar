@@ -1,12 +1,17 @@
 body {
-
+display:block;
+overflow:hidden;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 13px;
     color:#333
 }
+.container{
+  position: absolute;
+      left: 0px;
+      top: 100px;
 
+}
 p {
-
 width: 100%
     padding: 60px;
 }
@@ -23,7 +28,7 @@ width: 100%
 }
 
 #header {
-    background-image: url(images/seattle.png);
+    /*background-image: url(images/seattle.png);*/
     height: 95px;
     background: #red;
     border-radius: 10px;
