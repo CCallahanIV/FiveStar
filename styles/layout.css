@@ -1,9 +1,8 @@
 body {
 display:block;
-overflow:hidden;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 13px;
-    color:#333
+    color:#333;
 }
 .container{
   position: absolute;
