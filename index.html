@@ -9,20 +9,28 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
-    <link rel="stylesheet" href="styles/pacman.css">
+    <!-- <link rel="stylesheet" href="styles/pacman.css"> -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400' rel='stylesheet' type='text/css'>
     <!-- TEMPLATE SCRIPTS HERE -->
 
     <script id="rest-template" type="text/x-handlebars-template">
       <li>
         <div class="rest_teaser">
-          <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
-          <img alt="restaurant image" src="{{img_url}}">
 
-          Rating: <img alt="rating" src="{{rating_img_url}}">
-          <p>{{display_address}}</p>
-          <img src="http://downloadicons.net/sites/default/files/open--trash-can-icon-74608.png" id="trash_can">
+          <section class="flex-container">
+            <img alt="restaurant image" src="{{image_url}}">
+
+            <div>
+              <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
+              Rating: <img alt="rating" src="{{rating_img_url}}">
+              <p>{{display_address}}</p>
+            </div>
+
+            <img src="http://downloadicons.net/sites/default/files/open--trash-can-icon-74608.png" id="trash_can">
+          </section>
+
           <button type="button" id="showMore">Show More</button>
+
         </div>
         <div class="rest_details">
           Phone Number: {{display_phone}}
@@ -32,16 +40,18 @@
       </li>
     </script>
   </head>
-<header>
-
-</header>
   <body>
+    <header>
+      <img src="image/pig.png"/>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- WEBSITE GOES HERE -->
-
-
-    <!--Add class "infinite" for an infinite loop-->
-     <div id="wrapper">
+    <div id="wrapper">
       <div class="sky">
       <div class="moon"></div>
       <div class="clouds_one"></div>
@@ -49,51 +59,15 @@
       <div class="clouds_three"></div>
     </div>
 
-<div id="wrapper">
-     <div id="headerwrap">
-     <div id="header">
+    <main>
+      <button type="button" id="goButton">GO BUTTON</button>
+      <ul id="restList"></ul>
+    </main>
 
-         <img src="image/seattle.png"</img>
-           <h2>Example Text</h2>
-     </div>
-     </div>
-     <div id="navigationwrap">
-     <div id="navigation">
-         <p></p>
-     </div>
-     </div>
-     <div id="leftcolumnwrap">
-     <div id="leftcolumn">
-         <p></p>
-     </div>
-     </div>
-     <div id="contentwrap">
-     <div id="content">
-        <p></p>
-     </div>
-     </div>
-     <div id="footerwrap">
-           <div id="footer">
-               <p>This is the Footer</p>
-           </div>
-           </div>
-                    </div>
-           <div class="body">
-
-</div>
-
-
-       </div> -->
-    <button type="button" id="goButton">GO BUTTON</button>
-
-    <div id="loadWrapper">
+    <!-- <div id="loadWrapper">
       <div class="pacman"></div>
       <div class="dot"></div>
-    </div>
-
-    <ul id="restList">
-    </ul>
-
+    </div> -->
 
   <!-- VENDOR SCRIPTS   -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
