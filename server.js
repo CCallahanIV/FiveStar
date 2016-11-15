@@ -27,9 +27,25 @@ app.get('/requestYelpRestaurants', function (req, res) {
     stuff[strArray[0]] = strArray[1];
   });
   stuff.location = stuff.location.replace(/%20/g, ' ');
+  stuff.location = stuff.location.replace(/%2C/g, '');
+  console.log(stuff.location);
+
   yelp.search(stuff)
   .then(function (data) {
-    res.send(data);
+    var formattedData = data.businesses.map(function(ele){
+      return {
+        categories: ele.categories.join(', '),
+        display_phone: ele.display_phone,
+        address: ele.location.address.join(', '),
+        display_address: ele.location.display_address,
+        name: ele.name,
+        rating_img_url: ele.rating_img_url,
+        image_url: ele.image_url,
+        url: ele.url,
+        rating: ele.rating
+      };
+    });
+    res.send(formattedData);
     // console.log(data);
   })
   .catch(function (err) {
