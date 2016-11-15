@@ -9,9 +9,9 @@
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
-        console.log('Lat: ' + pos.lat + ' Lng: ' + pos.lng);
         geoLocation.corToAddress(pos.lat, pos.lng);
-      });
+      }, geoLocation.handleLocationError,
+      {enableHighAccuracy: true, timeout: 5000});
     } else {
       // Browser doesn't support Geolocation
       geoLocation.handleLocationError(false, infoWindow, map.getCenter());
@@ -26,7 +26,7 @@
 
   geoLocation.corToAddress = function(lat, lng) {
     $.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lng +'&key=AIzaSyCiuRbAeONn0SLDZquHg-J5QEvJygcfORI', function (data) {
-      console.log(data.results['0'].formatted_address);
+      // console.log(data.results['0'].formatted_address);
       geoLocation.formattedAddress = data.results['0'].formatted_address;
     }).done(restaurant.requestRestaurants);
   };
