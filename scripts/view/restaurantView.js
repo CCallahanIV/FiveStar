@@ -23,11 +23,12 @@
 
   restaurantView.handleListTeaser = function() {
     $('#restList').on('click', '#trash_can', function() {
-      $(this).parent().parent().slideUp('500ms', function() {
+      $(this).parent().parent().parent().slideUp('500ms', function() {
+        console.log(this);
         $(this).remove('li');
         restaurantView.renderObject(restaurant.allRestaurants.splice(0,1), '#restList','#rest-template');
         if ($('#restList li').length === 0) {
-          console.log('Bitch You Picky');
+          console.log('You\'re out of options.');
         }
       });
     });
@@ -36,9 +37,8 @@
   restaurantView.handleListDetails = function() {
     $('#restList').on('click', '#showMore', function() {
       $(this).parent().next().slideToggle('slow');
-      console.log(this);
+      $(this).parent().parent().siblings().fadeToggle();
       if($(this).text() === 'Show More'){
-        console.log(this.text);
         $(this).text('Show Less');
       } else {
         $(this).text('Show More');
