@@ -21,7 +21,7 @@
     restaurant.allRestaurants.sort(function(a, b){
       return b.rating - a.rating;
     });
-    restaurantView.renderObject(restaurant.allRestaurants.slice(0,5), '#restList','#rest-template');
+    restaurantView.renderObject(restaurant.allRestaurants.splice(0,5), '#restList','#rest-template');
   };
 
   module.restaurant = restaurant;
