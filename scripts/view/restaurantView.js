@@ -20,7 +20,16 @@
     });
   };
 
+  restaurantView.handleListItems = function() {
+    $('#restList').on('click', 'li', function() {
+      $(this).fadeOut('fast', function() {
+        $(this).remove('li');
+      });
+    });
+  };
+
   restaurantView.handleButton();
+  restaurantView.handleListItems();
 
   module.restaurantView = restaurantView;
 })(window);
