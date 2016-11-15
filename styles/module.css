@@ -201,9 +201,14 @@ html, body {
 
 #trash_can {
   width: 60px;
+  cursor: pointer;
 }
 
 li {
   border: 2px solid black;
 
+}
+
+.rest_details {
+  display: none;
 }

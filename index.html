@@ -9,18 +9,20 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/pacman.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400' rel='stylesheet' type='text/css'>
     <!-- TEMPLATE SCRIPTS HERE -->
 
     <script id="rest-template" type="text/x-handlebars-template">
       <li>
         <div class="rest_teaser">
-          <h1><a href="{{url}}">{{name}}</a></h1>
-          <p><img alt="restaurant" src="{{img_url}}"></p>
+          <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
+          <img alt="restaurant image" src="{{img_url}}">
+
           Rating: <img alt="rating" src="{{rating_img_url}}">
           <p>{{display_address}}</p>
           <img src="http://downloadicons.net/sites/default/files/open--trash-can-icon-74608.png" id="trash_can">
+          <button type="button" id="showMore">Show More</button>
         </div>
         <div class="rest_details">
           Phone Number: {{display_phone}}
@@ -83,6 +85,12 @@
 
        </div> -->
     <button type="button" id="goButton">GO BUTTON</button>
+
+    <div id="loadWrapper">
+      <div class="pacman"></div>
+      <div class="dot"></div>
+    </div>
+
     <ul id="restList">
     </ul>
 
