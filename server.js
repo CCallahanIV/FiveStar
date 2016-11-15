@@ -33,16 +33,18 @@ app.get('/requestYelpRestaurants', function (req, res) {
   yelp.search(stuff)
   .then(function (data) {
     var formattedData = data.businesses.map(function(ele){
+      console.log(ele.location.display_address.join(', '));
       return {
         categories: ele.categories.join(', '),
         display_phone: ele.display_phone,
-        address: ele.location.address.join(', '),
-        display_address: ele.location.display_address,
+        address: ele.location.display_address.join(', '),
+        display_address: ele.location.display_address.join(', '),
         name: ele.name,
         rating_img_url: ele.rating_img_url,
         image_url: ele.image_url,
         url: ele.url,
-        rating: ele.rating
+        rating: ele.rating,
+        snippet_text: ele.snippet_text
       };
     });
     res.send(formattedData);
