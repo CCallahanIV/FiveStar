@@ -16,15 +16,16 @@
     <script id="rest-template" type="text/x-handlebars-template">
       <li>
         <div class="rest_teaser">
-          <img src="{{snippet_img_url}}">
-          <h1>{{name}}</h1>
-          <p><a href="{{rating_img_url}}"></a></p>
-          <p>{{address}}</p>
+          <h1><a href="{{url}}">{{name}}</a></h1>
+          <p><img alt="restaurant" src="{{img_url}}"></p>
+          Rating: <img alt="rating" src="{{rating_img_url}}">
+          <p>{{display_address}}</p>
+          <img src="http://downloadicons.net/sites/default/files/open--trash-can-icon-74608.png" id="trash_can">
         </div>
         <div class="rest_details">
-          <li>{{display-phone}}</li>
-          <li>{{map-url}}</li>
-          <li>{{url}}</li>
+          Phone Number: {{display_phone}}
+          Categories: {{categories}}
+          <iframe width="400" height="400" src={{map_url}}></iframe>
         </div>
       </li>
     </script>
@@ -33,7 +34,9 @@
 
 </header>
   <body>
+
     <!-- WEBSITE GOES HERE -->
+
 
     <!--Add class "infinite" for an infinite loop-->
      <div id="wrapper">
@@ -43,6 +46,8 @@
       <div class="clouds_two"></div>
       <div class="clouds_three"></div>
     </div>
+
+<div id="wrapper">
      <div id="headerwrap">
      <div id="header">
 
@@ -70,11 +75,17 @@
                <p>This is the Footer</p>
            </div>
            </div>
-           </div>
+                    </div>
            <div class="body">
 
 </div>
-<!-- notification -->
+
+
+       </div> -->
+    <button type="button" id="goButton">GO BUTTON</button>
+    <ul id="restList">
+    </ul>
+
 
   <!-- VENDOR SCRIPTS   -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -85,6 +96,7 @@
   <!-- MODEL SCRIPTS -->
   <script src="scripts/models/geoLocation.js"></script>
   <script src="scripts/models/restaurant.js"></script>
+  <script src="scripts/models/map.js"></script>
   <!-- VIEW SCRIPTS -->
   <script src="scripts/view/restaurantView.js"></script>
   </body>
