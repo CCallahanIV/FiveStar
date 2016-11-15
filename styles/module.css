@@ -9,7 +9,56 @@
   display: flex;
   justify-content: space-around;
   height: 100px;
+  font-family: Josefin sans;
+  color: white;
 }
 .flex-container div {
   width: 329px;
+  padding-top: 20px;
+}
+#restList li {
+  border: 2px solid orange;
+  border-radius: 25px;
+  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 23%,rgba(32,124,202,1) 84%,rgba(125,185,232,1) 93%);
+}
+#restList li>div {
+  margin-top: 10px;
+}
+#restList a {
+  color: orange;
+  text-decoration: none;
+}
+#goButton {
+  background-color:#c06;
+   height:150px;
+   width:150px;
+   -webkit-border-radius:75px;
+}
+#showMore {
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #f797f4 ;
+  background: #65a9d7 ;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cf7c7c ), to(#65a9d7 ));
+  background: -webkit-linear-gradient(top, #cf7c7c , #65a9d7 );
+  padding: 3px 5px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 24px;
+  font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  }
+#showMore:hover {
+  border-top-color: #28597a ;
+  background: #28597a ;
+  color: #ccc;
+  }
+#showMore:active {
+  border-top-color: #1b435e ;
+  background: #1b435e ;
 }
