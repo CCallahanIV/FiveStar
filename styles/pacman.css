@@ -128,7 +128,3 @@ div #loadWrapper .dot {
   -o-animation: r-to-l 0.4s infinite;
   animation: r-to-l 0.4s infinite;
 }
-
-/*div #loadWrapper{
-  display: none;
-}*/

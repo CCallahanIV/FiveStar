@@ -28,7 +28,6 @@ app.get('/requestYelpRestaurants', function (req, res) {
   });
   stuff.location = stuff.location.replace(/%20/g, ' ');
   stuff.location = stuff.location.replace(/%2C/g, '');
-  console.log(stuff.location);
 
   yelp.search(stuff)
   .then(function (data) {
@@ -36,17 +35,17 @@ app.get('/requestYelpRestaurants', function (req, res) {
       return {
         categories: ele.categories.join(', '),
         display_phone: ele.display_phone,
-        address: ele.location.address.join(', '),
-        display_address: ele.location.display_address,
+        address: ele.location.display_address.join(', '),
+        display_address: ele.location.display_address.join(', '),
         name: ele.name,
         rating_img_url: ele.rating_img_url,
         image_url: ele.image_url,
         url: ele.url,
-        rating: ele.rating
+        rating: ele.rating,
+        snippet_text: ele.snippet_text
       };
     });
     res.send(formattedData);
-    // console.log(data);
   })
   .catch(function (err) {
     console.error(err);

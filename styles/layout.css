@@ -1,83 +1,13 @@
-body {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    color:#333
+header {
+  background-color: lightgray;
+  width: 100%;
 }
-
-p {
-    padding: 10px;
+nav {
+  display: inline-block;
 }
-
-#wrapper {
-    margin: 0 auto;
-    width: 1000px;
+nav li {
+  display: inline;
 }
-
-#headerwrap {
-    width: 1000px;
-    float: left;
-    margin: 0 auto;
-}
-
-#header {
-    height: 75px;
-    background: #FF2D0D;
-    border-radius: 10px;
-    border: 1px solid #eb1900;
-    margin: 5px;
-}
-
-#navigationwrap {
-    width: 1000px;
-    float: left;
-    margin: 0 auto;
-}
-
-#navigation {
-    height: 40px;
-    background: #FFCC33;
-    border-radius: 10px;
-    border: 1px solid #ebb81f;
-    margin: 5px;
-}
-
-#contentwrap {
-    width: 850px;
-    float: left;
-    margin: 0 auto;
-}
-
-#content {
-    background: #FFFFFF;
-    border-radius: 10px;
-    border: 1px solid #ebebeb;
-    margin: 5px;
-}
-
-#leftcolumnwrap {
-    width: 150px;
-    float: left;
-    margin: 0 auto;
-}
-
-#leftcolumn {
-    background: #33CCFF;
-    border-radius: 10px;
-    border: 1px solid #1fb8eb;
-    margin: 5px;
-}
-
-#footerwrap {
-    width: 1000px;
-    float: left;
-    margin: 0 auto;
-    clear: both;
-}
-
-#footer {
-    height: 40px;
-    background: #33FF66;
-    border-radius: 10px;
-    border: 1px solid #1feb52;
-    margin: 5px;
+header img{
+  width: 150px;
 }

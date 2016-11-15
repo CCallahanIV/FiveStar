@@ -2,47 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
-
+    <!-- <link rel="stylesheet" href="styles/pacman.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Josefin+Sans' rel='stylesheet' type='text/css'>
     <!-- TEMPLATE SCRIPTS HERE -->
+
     <script id="rest-template" type="text/x-handlebars-template">
       <li>
         <div class="rest_teaser">
-          <h1><a href="{{url}}">{{name}}</a></h1>
-          <p><img alt="restaurant" src="{{img_url}}"></p>
-          Rating: <img alt="rating" src="{{rating_img_url}}">
-          <p>{{display_address}}</p>
-          <img src="http://downloadicons.net/sites/default/files/open--trash-can-icon-74608.png" id="trash_can">
+
+          <section class="flex-container">
+            <img alt="restaurant image" src="{{image_url}}">
+
+            <div>
+              <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
+              Rating: <img alt="rating" src="{{rating_img_url}}">
+              <p>{{display_address}}</p>
+            </div>
+
+            <img src="http://downloadicons.net/sites/default/files/open--trash-can-icon-74608.png" id="trash_can">
+          </section>
+
+          <button type="button" id="showMore">Show More</button>
+
         </div>
         <div class="rest_details">
           Phone Number: {{display_phone}}
           Categories: {{categories}}
+          Snippet Text: {{snippet_text}}
           <iframe width="400" height="400" src={{map_url}}></iframe>
         </div>
       </li>
     </script>
   </head>
   <body>
+    <header>
+      <img src="image/pig.png"/>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- WEBSITE GOES HERE -->
-    <button type="button" id="goButton">GO BUTTON</button>
-
-    <div id="loadWrapper">
-      <div class="pacman"></div>
-      <div class="dot"></div>
+    <div id="wrapper">
+      <div class="sky">
+      <div class="moon"></div>
+      <div class="clouds_one"></div>
+      <div class="clouds_two"></div>
+      <div class="clouds_three"></div>
     </div>
 
-    <ul id="restList">
-    </ul>
+    <main>
+      <button type="button" id="goButton">GO BUTTON</button>
+      <ul id="restList"></ul>
+    </main>
 
   <!-- VENDOR SCRIPTS   -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
   <!-- CONTROLLER SCRIPTS -->
 
   <!-- MODEL SCRIPTS -->
