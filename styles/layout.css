@@ -1,11 +1,14 @@
 body {
+
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 13px;
     color:#333
 }
 
 p {
-    padding: 10px;
+
+width: 100%
+    padding: 60px;
 }
 
 #wrapper {
@@ -20,11 +23,12 @@ p {
 }
 
 #header {
-    height: 75px;
-    background: #FF2D0D;
+    background-image: url(images/seattle.png);
+    height: 95px;
+    background: #red;
     border-radius: 10px;
-    border: 1px solid #eb1900;
-    margin: 5px;
+  contrast:10s0%;
+    /*padding:10px;*/
 }
 
 #navigationwrap {
