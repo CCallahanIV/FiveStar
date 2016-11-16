@@ -45,6 +45,8 @@
     });
   };
 
+  
+
   // restaurantView.handleStoreLink = function() {
   //   $('restList').on('click', '.storeLink', function(event) {
   //     event.preventDefault();
