@@ -1,12 +1,35 @@
-header .body {
-position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  height: 100%
+header #pig {
+  height: 150px;
+  position: absolute;
+  left:0px;
+  top:0px;
+  width: 150px;
+  z-index: 3;
 }
-
+nav {
+  position: absolute;
+  right:0px;
+  top:0px;
+  height: 150px;
+  z-index: 3;
+}
+nav ul {
+  margin: 60px;
+}
+nav li {
+  display: inline;
+}
+#skyline {
+  position: absolute;
+  bottom: 15%;
+  z-index: 2;
+}
+#wrapper {
+  position: relative;
+  top:-150px;
+  bottom:50%;
+  z-index: -1;
+}
 .sky {
   height: 480px;
   background: #007fd5;
@@ -201,26 +224,4 @@ position: absolute;
   100% {
     left: -200%
   }
-}
-  /*background-color: lightgray;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}*/
-header img {
-  height: 150px;
-}
-nav {
-  height: 150px;
-}
-nav ul {
-  margin: 60px;
-}
-nav li {
-  display: inline;
-}
-header img{
-  position: absolute;
-  width: 150px;
-  z-index: 1;
 }
