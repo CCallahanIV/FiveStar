@@ -17,7 +17,7 @@
 
   restaurantView.handleListTeaser = function() {
     $('#restList').on('click', '#trash_can', function() {
-      $(this).parent().parent().parent().slideUp('500ms', function() {
+      $(this).parent().parent().parent().parent().slideUp('500ms', function() {
 
         //Check for any unshown list items and toggle them to shown.
         if($(this).siblings().attr('style')){
@@ -34,7 +34,7 @@
   };
 
   restaurantView.handleListDetails = function() {
-    $('#restList').on('click', '#showMore', function() {
+    $('.lists').on('click', '#showMore', function() {
       $(this).parent().next().slideToggle('slow');
       $(this).parent().parent().siblings().fadeToggle();
       if($(this).text() === 'Show More'){
@@ -45,17 +45,27 @@
     });
   };
 
-  // restaurantView.handleStoreLink = function() {
-  //   $('restList').on('click', '.storeLink', function(event) {
-  //     event.preventDefault();
-  //     window.open(this.href);
-  //   });
-  // };
+  $('#restList').on('click', '#favorites', function () {
+    var getName = $(this).parent().parent().find('h1')[0].outerText;
+    restaurant.allRestaurantsClone.forEach(function (obj) {
+      if (obj.name === getName) {
+        if (localStorage.favorites) {
+          var restaurantsObjects = JSON.parse(localStorage.getItem('favorites'));
+          restaurantsObjects.unshift(obj);
+          localStorage.setItem('favorites', JSON.stringify(restaurantsObjects));
+          restaurantView.renderObject([obj], '#favoritesList', '#rest-template')
+        } else {
+          var restObj = JSON.stringify([obj]);
+          localStorage.setItem('favorites', restObj)
+        }
+      }
+    })
+  });
 
   restaurantView.handleListTeaser();
   restaurantView.handleListDetails();
   geoLocation.getLocation();
-  // restaurantView.handleStoreLink();
+  favObj.getFavorites();
 
   module.restaurantView = restaurantView;
 })(window);

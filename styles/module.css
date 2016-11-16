@@ -19,15 +19,15 @@ iframe {
 .flex-container div {
   padding-top: 10px;
 }
-#restList li {
+.lists li {
   border: 2px solid orange;
   border-radius: 25px;
   background: -webkit-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
 }
-#restList li>div {
+.lists li>div {
   margin-top: 10px;
 }
-#restList a {
+.lists a {
   color: orange;
   text-decoration: none;
 }
