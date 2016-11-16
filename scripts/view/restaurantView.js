@@ -34,7 +34,7 @@
   };
 
   restaurantView.handleListDetails = function() {
-    $('#restList').on('click', '#showMore', function() {
+    $('.lists').on('click', '#showMore', function() {
       $(this).parent().next().slideToggle('slow');
       $(this).parent().parent().siblings().fadeToggle();
       if($(this).text() === 'Show More'){
@@ -53,6 +53,7 @@
           var restaurantsObjects = JSON.parse(localStorage.getItem('favorites'));
           restaurantsObjects.unshift(obj);
           localStorage.setItem('favorites', JSON.stringify(restaurantsObjects));
+          restaurantView.renderObject([obj], '#favoritesList', '#rest-template')
         } else {
           var restObj = JSON.stringify([obj]);
           localStorage.setItem('favorites', restObj)
@@ -64,7 +65,7 @@
   restaurantView.handleListTeaser();
   restaurantView.handleListDetails();
   geoLocation.getLocation();
-  // restaurantView.handleStoreLink();
+  favObj.getFavorites();
 
   module.restaurantView = restaurantView;
 })(window);

@@ -22,15 +22,15 @@ iframe {
   width: 329px;
   padding-top: 20px;
 }
-#restList li {
+.lists li {
   border: 2px solid orange;
   border-radius: 25px;
   background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 23%,rgba(32,124,202,1) 84%,rgba(125,185,232,1) 93%);
 }
-#restList li>div {
+.lists li>div {
   margin-top: 10px;
 }
-#restList a {
+.lists a {
   color: orange;
   text-decoration: none;
 }

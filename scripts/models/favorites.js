@@ -13,6 +13,6 @@
       $('#favoritesList').html('No favorites');
     }
   };
-  favObj.getFavorites();
+  
   module.favObj = favObj;
 })(window);
