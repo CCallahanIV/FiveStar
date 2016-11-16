@@ -1,9 +1,9 @@
 header #pig {
-  height: 150px;
+  height: 80px;
   position: absolute;
   left:0px;
   top:0px;
-  width: 150px;
+  width: 80px;
   z-index: 3;
 }
 nav {
@@ -14,22 +14,47 @@ nav {
   z-index: 3;
 }
 nav ul {
-  margin: 60px;
+  margin: 40px 40px 0px 0px;
 }
 nav li {
   display: inline;
 }
+
+.navLink {
+  font-family: Josefin sans;
+  padding: 15px;
+  text-decoration: none;
+  color: red;
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
 #skyline {
   position: absolute;
-  bottom: 15%;
+  top: -260px;
   z-index: 2;
 }
 #wrapper {
   position: relative;
-  top:-150px;
-  bottom:50%;
+  top:-180px;
   z-index: -1;
 }
+
+header {
+  position:fixed;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+main {
+  width: 100%;
+  position:absolute;
+  top: 180px;
+  z-index:1;
+}
+
 .sky {
   height: 480px;
   background: #007fd5;
