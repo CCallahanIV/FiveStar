@@ -1,9 +1,17 @@
 header {
   background-color: lightgray;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+header img {
+  height: 150px;
 }
 nav {
-  display: inline-block;
+  height: 150px;
+}
+nav ul {
+  margin: 60px;
 }
 nav li {
   display: inline;

@@ -1,5 +1,11 @@
+iframe {
+  display: block;
+  margin: 0 auto;
+}
 .rest_details {
   display: none;
+  color: white;
+  padding: 10px;
 }
 #trash_can {
   width: 60px;
