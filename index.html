@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/module.css">
     <!-- <link rel="stylesheet" href="styles/pacman.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Josefin+Sans' rel='stylesheet' type='text/css'>
-    <script src="https://use.fontawesome.com/7987ffcc0d.js"></script>
     <!-- TEMPLATE SCRIPTS HERE -->
 
     <script id="rest-template" type="text/x-handlebars-template">
@@ -19,27 +18,32 @@
         <div class="rest_teaser">
 
           <section class="flex-container">
-            <img alt="restaurant image" src="{{image_url}}">
+            <img class="restImage" alt="restaurant image" src="{{image_url}}">
 
             <div>
-              <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
-              Rating: <img alt="rating" src="{{rating_img_url}}">
-              <p>{{display_address}}</p>
+              <div class="contentWrapper">
+                <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
+                Rating: <img alt="rating" src="{{rating_img_url}}">
+                <p>{{display_address}}</p>
+              </div>
             </div>
             <div class="icons">
-              <i id="trash_can" class="fa fa-trash" style="font-size:300%;" aria-hidden="true"></i>
               <i id="favorites" class="fa fa-star" style="font-size:275%;" aria-hidden="true"></i>
+              <br><br>
+              <i id="trash_can" class="fa fa-trash" style="font-size:300%;" aria-hidden="true"></i>
             </div>
           </section>
 
           <button type="button" id="showMore">Show More</button>
 
         </div>
-        <div class="rest_details">
-          Phone Number: {{display_phone}}<br>
-          Category: {{categories}}<br>
-          Description: {{snippet_text}}<br>
-          <iframe width="400" height="400" src={{map_url}}></iframe>
+          <div class="rest_details">
+            <div class="detailsWrapper">
+            Phone Number: {{display_phone}}<br>
+            Category: {{categories}}<br>
+            Description: {{snippet_text}}<br>
+          </div>
+          <iframe width="350" height="400" src={{map_url}}></iframe>
         </div>
       </li>
     </script>
@@ -49,22 +53,22 @@
       <div id="BackgroundContainer">
         <div id="wrapper">
           <div class="sky">
-          <div class="moon"></div>
-          <div class="clouds_one"></div>
-          <div class="clouds_two"></div>
-          <div class="clouds_three"></div>
+            <div class="moon"></div>
+            <div class="clouds_one"></div>
+            <div class="clouds_two"></div>
+            <div class="clouds_three"></div>
+          </div>
         </div>
       </div>
-        <nav>
-          <ul>
-            <li><a class="navLink" href="/">Home</a></li>
-            <li><a class="navLink" href="/about">About</a></li>
-            <li><a class="navLink" href="/favorites">Favorites</a></li>
-          </ul>
-        </nav>
-        <a href="/"><img id="pig" src="image/pig.png"/></a>
-        <img id="skyline" src="image/seattle.png">
-      </div>
+      <nav>
+        <ul>
+          <li><a class="navLink" href="/">Home</a></li>
+          <li><a class="navLink" href="/about">About</a></li>
+          <li><a class="navLink" href="/favorites">Favorites</a></li>
+        </ul>
+      </nav>
+      <a href="/"><img id="pig" src="image/pig.png"/></a>
+      <img id="skyline" src="image/seattle.png">
     </header>
     <main>
 
@@ -119,7 +123,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="vendor/scripts/page.js"></script>
-
+  <script src="https://use.fontawesome.com/7987ffcc0d.js"></script>
 
   <!-- MODEL SCRIPTS -->
   <script src="scripts/models/geoLocation.js"></script>
