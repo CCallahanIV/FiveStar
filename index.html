@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/module.css">
     <!-- <link rel="stylesheet" href="styles/pacman.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Josefin+Sans' rel='stylesheet' type='text/css'>
-    <script src="https://use.fontawesome.com/7987ffcc0d.js"></script>
     <!-- TEMPLATE SCRIPTS HERE -->
 
     <script id="rest-template" type="text/x-handlebars-template">
@@ -19,27 +18,32 @@
         <div class="rest_teaser">
 
           <section class="flex-container">
-            <img alt="restaurant image" src="{{image_url}}">
+            <img class="restImage" alt="restaurant image" src="{{image_url}}">
 
             <div>
-              <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
-              Rating: <img alt="rating" src="{{rating_img_url}}">
-              <p>{{display_address}}</p>
+              <div class="contentWrapper">
+                <h1><a target="_blank" href="{{url}}" class="storeLink">{{name}}</a></h1>
+                Rating: <img alt="rating" src="{{rating_img_url}}">
+                <p>{{display_address}}</p>
+              </div>
             </div>
             <div class="icons">
-              <i id="trash_can" class="fa fa-trash" style="font-size:300%;" aria-hidden="true"></i>
               <i id="favorites" class="fa fa-star" style="font-size:275%;" aria-hidden="true"></i>
+              <br><br>
+              <i id="trash_can" class="fa fa-trash" style="font-size:300%;" aria-hidden="true"></i>
             </div>
           </section>
 
           <button type="button" id="showMore">Show More</button>
 
         </div>
-        <div class="rest_details">
-          Phone Number: {{display_phone}}<br>
-          Category: {{categories}}<br>
-          Description: {{snippet_text}}<br>
-          <iframe width="400" height="400" src={{map_url}}></iframe>
+          <div class="rest_details">
+            <div class="detailsWrapper">
+            Phone Number: {{display_phone}}<br>
+            Category: {{categories}}<br>
+            Description: {{snippet_text}}<br>
+          </div>
+          <iframe width="350" height="400" src={{map_url}}></iframe>
         </div>
       </li>
     </script>
@@ -68,56 +72,64 @@
     </header>
     <main>
 
-      <ul id="restList" class="tab-content"></ul>
+      <ul id="restList" class="lists"></ul>
+
+      <!-- START ABOUT PAGE -->
+
+      <div id="aboutUs">
+
+        <h1>About Us</h1>
+
+        <section class="bio">
+          <img src="http://placehold.it/250x250">
+          <h2>Name</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </section>
+        <section class="bio">
+          <img src="http://placehold.it/250x250">
+          <h2>Name</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </section>
+        <section class="bio">
+          <img src="http://placehold.it/250x250">
+          <h2>Name</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </section>
+        <section class="bio">
+          <img src="http://placehold.it/250x250">
+          <h2>Name</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </section>
+
+      </div>
+
+      <!-- Start Favorites Page -->
+      <div id="favoritesPage">
+
+        <ul id="favoritesList" class="lists">
+
+        </ul>
+
+      </div>
 
     </main>
 
-<!-- START ABOUT PAGE -->
 
-  <div id="aboutUs">
 
-    <h1>About Us</h1>
 
-    <section class="bio">
-      <img src="http://placehold.it/250x250">
-      <h2>Name</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </section>
-    <section class="bio">
-      <img src="http://placehold.it/250x250">
-      <h2>Name</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </section>
-    <section class="bio">
-      <img src="http://placehold.it/250x250">
-      <h2>Name</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </section>
-    <section class="bio">
-      <img src="http://placehold.it/250x250">
-      <h2>Name</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </section>
 
-  </div>
-
-<!-- Start About Page -->
-<div id="favoritesPage">
-
-  <p>Favorites<p>
-
-</div>
 
   <!-- VENDOR SCRIPTS   -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="vendor/scripts/page.js"></script>
-
+  <script src="https://use.fontawesome.com/7987ffcc0d.js"></script>
 
   <!-- MODEL SCRIPTS -->
   <script src="scripts/models/geoLocation.js"></script>
   <script src="scripts/models/restaurant.js"></script>
   <script src="scripts/models/map.js"></script>
+  <script src="scripts/models/favorites.js"></script>
   <!-- VIEW SCRIPTS -->
   <script src="scripts/view/restaurantView.js"></script>
   <!-- CONTROLLER SCRIPTS -->
