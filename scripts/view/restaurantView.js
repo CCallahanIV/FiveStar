@@ -2,12 +2,6 @@
 (function(module) {
   restaurantView = {};
 
-  restaurantView.handleButton = function(){
-    $('#goButton').on('click', function(){
-      geoLocation.getLocation();
-    });
-  };
-
   restaurantView.toHtml = function(obj, templateID){
     var source = $(templateID).html();
     var templateRender = Handlebars.compile(source);
@@ -24,7 +18,12 @@
   restaurantView.handleListTeaser = function() {
     $('#restList').on('click', '#trash_can', function() {
       $(this).parent().parent().parent().slideUp('500ms', function() {
-        console.log(this);
+
+        //Check for any unshown list items and toggle them to shown.
+        if($(this).siblings().attr('style')){
+          $(this).siblings().fadeToggle();
+        }
+
         $(this).remove('li');
         restaurantView.renderObject(restaurant.allRestaurants.splice(0,1), '#restList','#rest-template');
         if ($('#restList li').length === 0) {
@@ -53,10 +52,9 @@
   //   });
   // };
 
-
-  restaurantView.handleButton();
   restaurantView.handleListTeaser();
   restaurantView.handleListDetails();
+  geoLocation.getLocation();
   // restaurantView.handleStoreLink();
 
   module.restaurantView = restaurantView;
