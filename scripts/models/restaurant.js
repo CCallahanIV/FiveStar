@@ -4,7 +4,6 @@
   var restaurant = {}
   restaurant.allRestaurants = [];
 
-
   restaurant.requestRestaurants = function(){
     restaurant.queryParams = {term: 'restaurants', location: geoLocation.formattedAddress};
     $.get('/requestYelpRestaurants', restaurant.queryParams, function(data){

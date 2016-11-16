@@ -46,26 +46,30 @@
   </head>
   <body>
     <header>
-      <a href="/"><img src="image/pig.png"/></a>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/favorites">Favorites</a></li>
-        </ul>
-      </nav>
+      <div id="BackgroundContainer">
+        <div id="wrapper">
+          <div class="sky">
+          <div class="moon"></div>
+          <div class="clouds_one"></div>
+          <div class="clouds_two"></div>
+          <div class="clouds_three"></div>
+        </div>
+      </div>
+        <nav>
+          <ul>
+            <li><a class="navLink" href="/">Home</a></li>
+            <li><a class="navLink" href="/about">About</a></li>
+            <li><a class="navLink" href="/favorites">Favorites</a></li>
+          </ul>
+        </nav>
+        <a href="/"><img id="pig" src="image/pig.png"/></a>
+        <img id="skyline" src="image/seattle.png">
+      </div>
     </header>
-
-    <div id="wrapper">
-      <div class="sky">
-      <div class="moon"></div>
-      <div class="clouds_one"></div>
-      <div class="clouds_two"></div>
-      <div class="clouds_three"></div>
-    </div>
-
     <main>
+
       <ul id="restList" class="tab-content"></ul>
+
     </main>
 
 <!-- START ABOUT PAGE -->
