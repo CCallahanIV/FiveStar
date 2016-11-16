@@ -3,6 +3,7 @@
 (function(module) {
   var restaurant = {}
   restaurant.allRestaurants = [];
+  restaurant.allRestaurantsClone = [];
 
   restaurant.requestRestaurants = function(){
     restaurant.queryParams = {term: 'restaurants', location: geoLocation.formattedAddress};
@@ -20,6 +21,7 @@
     restaurant.allRestaurants.sort(function(a, b){
       return b.rating - a.rating;
     });
+    restaurant.allRestaurantsClone = restaurant.allRestaurants.slice(0,20);
     restaurantView.renderObject(restaurant.allRestaurants.splice(0,5), '#restList','#rest-template');
   };
 

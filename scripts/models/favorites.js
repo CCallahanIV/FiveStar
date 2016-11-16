@@ -1,15 +1,18 @@
-(function(){
+(function(module){
 
-  var favorites = {};
-  favorites.favArray = [];
+  var favObj = {};
+  favObj.favArray = [];
 
-  favorite.getFavorites = function() {
+  favObj.getFavorites = function() {
     if (localStorage.favorites) {
-      favorites.favArray = JSON.parse(localStorage.getItem('favorites'));
-      restaurantView.renderObject(favorites.favArray, '#favoritesList', '#rest-template');
+      console.log('favorites exits');
+      favObj.favArray = JSON.parse(localStorage.getItem('favorites'));
+      restaurantView.renderObject(favObj.favArray, '#favoritesList', '#rest-template');
 
+    } else {
+      $('#favoritesList').html('No favorites');
     }
   };
-
-module.favorites = favorites;
+  favObj.getFavorites();
+  module.favObj = favObj;
 })(window);

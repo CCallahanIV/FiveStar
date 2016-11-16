@@ -45,14 +45,21 @@
     });
   };
 
-  
-
-  // restaurantView.handleStoreLink = function() {
-  //   $('restList').on('click', '.storeLink', function(event) {
-  //     event.preventDefault();
-  //     window.open(this.href);
-  //   });
-  // };
+  $('#restList').on('click', '#favorites', function () {
+    var getName = $(this).parent().parent().find('h1')[0].outerText;
+    restaurant.allRestaurantsClone.forEach(function (obj) {
+      if (obj.name === getName) {
+        if (localStorage.favorites) {
+          var restaurantsObjects = JSON.parse(localStorage.getItem('favorites'));
+          restaurantsObjects.unshift(obj);
+          localStorage.setItem('favorites', JSON.stringify(restaurantsObjects));
+        } else {
+          var restObj = JSON.stringify([obj]);
+          localStorage.setItem('favorites', restObj)
+        }
+      }
+    })
+  });
 
   restaurantView.handleListTeaser();
   restaurantView.handleListDetails();
