@@ -1,6 +1,7 @@
 /* Routing for single page web app*/
 
-page('/', geoLocation.getLocation);
+page('/', restaurantController.reveal);
 page('/about', aboutController.reveal);
+page('/favorites', pigFindController.reveal);
 
 page();
