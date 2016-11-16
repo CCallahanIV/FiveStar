@@ -2,5 +2,6 @@
 
 page('/', restaurantController.reveal);
 page('/about', aboutController.reveal);
+page('/pigFind', pigFindController.reveal);
 
 page();

@@ -33,9 +33,9 @@
 
         </div>
         <div class="rest_details">
-          Phone Number: {{display_phone}}
-          Categories: {{categories}}
-          Snippet Text: {{snippet_text}}
+          Phone Number: {{display_phone}}<br>
+          Category: {{categories}}<br>
+          Description: {{snippet_text}}<br>
           <iframe width="400" height="400" src={{map_url}}></iframe>
         </div>
       </li>
@@ -48,6 +48,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
+          <li><a href="/pigFind">Pig Find</a></li>
         </ul>
       </nav>
     </header>
@@ -93,7 +94,12 @@
 
   </div>
 
+<!-- Start About Page -->
+<div id="pigPage">
 
+  <p>PIG PAGE<p>
+
+</div>
 
   <!-- VENDOR SCRIPTS   -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -110,6 +116,7 @@
   <!-- CONTROLLER SCRIPTS -->
   <script src="scripts/controller/aboutController.js"></script>
   <script src="scripts/controller/restaurantController.js"></script>
+  <script src="scripts/controller/pigFindController.js"></script>
   <script src="scripts/controller/routes.js"></script>
   </body>
 </html>

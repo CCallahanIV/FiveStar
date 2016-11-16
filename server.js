@@ -31,9 +31,10 @@ app.get('/requestYelpRestaurants', function (req, res) {
 
   yelp.search(stuff)
   .then(function (data) {
+    console.log(data);
     var formattedData = data.businesses.map(function(ele){
       return {
-        categories: ele.categories.join(', '),
+        categories: ele.categories[0][0],
         display_phone: ele.display_phone,
         address: ele.location.display_address.join(', '),
         display_address: ele.location.display_address.join(', '),

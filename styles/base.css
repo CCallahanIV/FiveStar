@@ -3,29 +3,3 @@
   background-repeat: no-repeat;
   background-size: 100%;
 }*/
-
-
-#aboutUs {
-  display: none;
-}
-
-#aboutUs h1 {
- font-weight: bold;
- font-size: 40px;
-}
-
-.bio {
-  width: 250;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.bio h2 {
-  font-size: 20px;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.bio p {
-  padding: 10px;
-}
