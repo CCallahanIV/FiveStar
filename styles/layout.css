@@ -32,7 +32,7 @@ nav li {
 
 #skyline {
   position: absolute;
-  top: -260px;
+  top: 50px;
   z-index: 2;
 }
 #wrapper {
