@@ -7,10 +7,8 @@ iframe {
   color: white;
   padding: 10px;
 }
-#trash_can {
-  width: 60px;
-  margin: 40px 0 20px 0;
-}
+
+
 .flex-container {
   display: flex;
   justify-content: space-around;
@@ -19,13 +17,12 @@ iframe {
   color: white;
 }
 .flex-container div {
-  width: 329px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 #restList li {
   border: 2px solid orange;
   border-radius: 25px;
-  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 23%,rgba(32,124,202,1) 84%,rgba(125,185,232,1) 93%);
+  background: -webkit-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
 }
 #restList li>div {
   margin-top: 10px;
@@ -34,12 +31,28 @@ iframe {
   color: orange;
   text-decoration: none;
 }
-#goButton {
-  background-color:#c06;
-   height:150px;
-   width:150px;
-   -webkit-border-radius:75px;
+
+.restImage {
+  position: relative;
+  top: 12px;
+  border-radius: 50%;
 }
+
+.contentWrapper {
+  margin: 0;
+  padding: 0px 0px 0px 8px;
+}
+
+div.detailsWrapper{
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.storeLink{
+  font-size: 1.2em;
+}
+
 #showMore {
   display: block;
   margin: 0 auto;
@@ -70,9 +83,25 @@ iframe {
 }
 
 .icons {
-  text-align: center;
   padding: 0;
+  text-align: center;
+  width: 60px;
 }
+
+#trash_can {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+}
+
+#favorites {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 50px;
+}
+
 /***********************
 About Us Styling
 ***********************/
