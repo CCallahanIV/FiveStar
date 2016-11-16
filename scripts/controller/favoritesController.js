@@ -5,7 +5,7 @@
     console.log('reveal rest');
     $('#aboutUs').hide();
     $('#restList').hide();
-    $('#pigFind').fadeIn();
+    $('#favoritesPage').fadeIn();
   };
 
   module.pigFindController = pigFindController;

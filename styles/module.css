@@ -69,6 +69,10 @@ iframe {
   background: #1b435e ;
 }
 
+.icons {
+  text-align: center;
+  padding: 0;
+}
 /***********************
 About Us Styling
 ***********************/
@@ -99,9 +103,9 @@ About Us Styling
 }
 
 /***********************
-Pig Page Styling
+Favorites Page Styling
 ***********************/
 
-#pigPage {
+#favoritesPage {
   display: none;
 }

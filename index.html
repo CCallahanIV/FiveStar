@@ -26,8 +26,10 @@
               Rating: <img alt="rating" src="{{rating_img_url}}">
               <p>{{display_address}}</p>
             </div>
-
-            <i id="trash_can" class="fa fa-trash" style="font-size:300%;" aria-hidden="true"></i>
+            <div class="icons">
+              <i id="trash_can" class="fa fa-trash" style="font-size:300%;" aria-hidden="true"></i>
+              <i id="favorites" class="fa fa-star" style="font-size:275%;" aria-hidden="true"></i>
+            </div>
           </section>
 
           <button type="button" id="showMore">Show More</button>
@@ -49,7 +51,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/pigFind">Pig Find</a></li>
+          <li><a href="/favorites">Favorites</a></li>
         </ul>
       </nav>
     </header>
@@ -96,9 +98,9 @@
   </div>
 
 <!-- Start About Page -->
-<div id="pigPage">
+<div id="favoritesPage">
 
-  <p>PIG PAGE<p>
+  <p>Favorites<p>
 
 </div>
 
@@ -117,7 +119,7 @@
   <!-- CONTROLLER SCRIPTS -->
   <script src="scripts/controller/aboutController.js"></script>
   <script src="scripts/controller/restaurantController.js"></script>
-  <script src="scripts/controller/pigFindController.js"></script>
+  <script src="scripts/controller/favoritesController.js"></script>
   <script src="scripts/controller/routes.js"></script>
   </body>
 </html>
