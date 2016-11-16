@@ -1,2 +1,11 @@
-img {
+/*body {
+  background-image: url('/image/seattle.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}*/
+
+
+
+h1 {
+ font-weight: bold;
 }
