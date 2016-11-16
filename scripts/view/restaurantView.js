@@ -17,7 +17,7 @@
 
   restaurantView.handleListTeaser = function() {
     $('#restList').on('click', '#trash_can', function() {
-      $(this).parent().parent().parent().slideUp('500ms', function() {
+      $(this).parent().parent().parent().parent().slideUp('500ms', function() {
 
         //Check for any unshown list items and toggle them to shown.
         if($(this).siblings().attr('style')){
