@@ -26,7 +26,6 @@
 
   geoLocation.corToAddress = function(lat, lng) {
     $.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lng +'&key=AIzaSyCiuRbAeONn0SLDZquHg-J5QEvJygcfORI', function (data) {
-      // console.log(data.results['0'].formatted_address);
       geoLocation.formattedAddress = data.results['0'].formatted_address;
     }).done(restaurant.requestRestaurants);
   };

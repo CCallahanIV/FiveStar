@@ -44,20 +44,15 @@
         }
       });
       $(this).parent().parent().parent().parent().slideUp('500ms', function() {
-        console.log('start of slideUp');
         //Check for any unshown list items and toggle them to shown.
         if($(this).siblings().attr('style')){
           $(this).siblings().fadeToggle();
         }
         $(this).remove('li');
-        var curTitle = $(this).find('h1')[0].outerText;
-        console.log(favObj.favArray);
         favObj.favArray.forEach(function (obj, idx) {
           var slim = obj.name;
-          console.log(slim);
-          if (curTitle === slim) {
+          if (favTitle === slim) {
             favObj.favArray.splice(idx, idx + 1);
-            console.log('deleting record', favObj.deleteRecord);
             favObj.deleteRecord(slim);
           }
         });
@@ -73,7 +68,6 @@
         $(this).text('Show Less');
       } else {
         $(this).text('Show More');
-        // $(this).removeClass('openRestaurant');
       }
     });
   };

@@ -1,6 +1,5 @@
 // Let's build a server!
 var express = require('express'),
-  requestProxy = require('express-request-proxy'),
   Yelp = require('yelp'),
   port = process.env.PORT || 3000,
   app = express();
@@ -20,18 +19,17 @@ var yelp = new Yelp({
 
 
 app.get('/requestYelpRestaurants', function (req, res) {
-  var stuff = {};
+  var yelpJson = {};
   var params = (req._parsedUrl.query).split('&');
   params.forEach(function (string) {
     var strArray = string.split('=');
-    stuff[strArray[0]] = strArray[1];
+    yelpJson[strArray[0]] = strArray[1];
   });
-  stuff.location = stuff.location.replace(/%20/g, ' ');
-  stuff.location = stuff.location.replace(/%2C/g, '');
+  yelpJson.location = yelpJson.location.replace(/%20/g, ' ');
+  yelpJson.location = yelpJson.location.replace(/%2C/g, '');
 
-  yelp.search(stuff)
+  yelp.search(yelpJson)
   .then(function (data) {
-    console.log(data);
     var formattedData = data.businesses.map(function(ele){
       return {
         categories: ele.categories[0][0],
@@ -57,14 +55,3 @@ app.get('*', function(request, response) {
   console.log('New request:', request.url);
   response.sendFile('index.html', {root: '.'});
 });
-
-// PROXY FORMAT STORED FOR REFERENCE, DELETE WHEN FINSISHED.
-// var proxyGithub = function(request, response) {
-//   console.log('Routing GitHub request for', request.params[0]);
-//   (requestProxy({
-//     url: 'https://api.github.com/' + request.params[0],
-//     headers: {Authorization: 'token ' + process.env.GITHUB_TOKEN}
-//   }))(request, response);
-// };
-//
-// app.get('/github/*', proxyGithub);
