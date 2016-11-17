@@ -35,12 +35,13 @@
 
   restaurantView.handleListDetails = function() {
     $('.lists').on('click', '#showMore', function() {
-      $(this).parent().next().slideToggle('slow');
+      $(this).parent().next().addClass('openRestaurant').slideToggle('slow');
       $(this).parent().parent().siblings().fadeToggle();
       if($(this).text() === 'Show More'){
         $(this).text('Show Less');
       } else {
         $(this).text('Show More');
+        // $(this).removeClass('openRestaurant');
       }
     });
   };
@@ -53,19 +54,23 @@
           var restaurantsObjects = JSON.parse(localStorage.getItem('favorites'));
           restaurantsObjects.unshift(obj);
           localStorage.setItem('favorites', JSON.stringify(restaurantsObjects));
-          restaurantView.renderObject([obj], '#favoritesList', '#rest-template')
+          restaurantView.renderObject([obj], '#favoritesList', '#rest-template');
+
         } else {
           var restObj = JSON.stringify([obj]);
-          localStorage.setItem('favorites', restObj)
+          localStorage.setItem('favorites', restObj);
         }
+        restaurantView.renderObject([obj], '#favoritesList', '#rest-template');
+        favObj.favArray.unshift(obj);
       }
-    })
+    });
   });
 
   restaurantView.handleListTeaser();
   restaurantView.handleListDetails();
   geoLocation.getLocation();
   favObj.getFavorites();
+  favoriteView.checkFav();
 
   module.restaurantView = restaurantView;
 })(window);
