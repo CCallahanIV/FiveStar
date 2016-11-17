@@ -144,7 +144,30 @@ About Us Styling
 /***********************
 Favorites Page Styling
 ***********************/
+#clearFavorite{
+  text-align: center;
+  background: #e7aef5;
+  background-image: -webkit-linear-gradient(top, #e7aef5, #bc6dd6);
+  background-image: -moz-linear-gradient(top, #e7aef5, #bc6dd6);
+  background-image: -ms-linear-gradient(top, #e7aef5, #bc6dd6);
+  background-image: -o-linear-gradient(top, #e7aef5, #bc6dd6);
+  background-image: linear-gradient(to bottom, #e7aef5, #bc6dd6);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  text-shadow: 4px 2px 3px #330a33;
+  font-family: Arial;
+  color: #eba4eb;
+  font-size: 60px;
+  padding: 16px 40px 15px 40px;
+  border: solid #dba6e6 2px;
+  text-decoration: none;
+}
 
+#clearFavorite:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
 #favoritesPage {
   display: none;
 }
