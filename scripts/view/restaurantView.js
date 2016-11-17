@@ -5,7 +5,6 @@
   restaurantView.toHtml = function(obj, templateID){
     var source = $(templateID).html();
     var templateRender = Handlebars.compile(source);
-    // $('.rest_details').hide('0ms');
     return templateRender(obj);
   };
 
@@ -13,9 +12,11 @@
     ObjectArray.forEach(function(obj){
       $(destinationID).append(restaurantView.toHtml(obj, templateID));
     });
+    //Call checkFav to look for any favorites currently in DOM.
+    favoriteView.checkFav();
   };
 
-  restaurantView.handleListTeaser = function() {
+  restaurantView.handleTrash = function() {
     $('#restList').on('click', '#trash_can', function() {
       $(this).parent().parent().parent().parent().slideUp('500ms', function() {
 
@@ -25,7 +26,8 @@
         }
 
         $(this).remove('li');
-        restaurantView.renderObject(restaurant.allRestaurants.splice(0,1), '#restList','#rest-template');
+        restaurant.loadNewRestaurant();
+
         if ($('#restList li').length === 0) {
           console.log('You\'re out of options.');
         }
@@ -45,29 +47,30 @@
     });
   };
 
-  $('#restList').on('click', '#favorites', function () {
-    var getName = $(this).parent().parent().find('h1')[0].outerText;
-    restaurant.allRestaurantsClone.forEach(function (obj) {
-      if (obj.name === getName) {
-        if (localStorage.favorites) {
-          var restaurantsObjects = JSON.parse(localStorage.getItem('favorites'));
-          restaurantsObjects.unshift(obj);
-          localStorage.setItem('favorites', JSON.stringify(restaurantsObjects));
-        } else {
-          var restObj = JSON.stringify([obj]);
-          localStorage.setItem('favorites', restObj)
-        }
-        restaurantView.renderObject([obj], '#favoritesList', '#rest-template');
-        favObj.favArray.unshift(obj);
-      }
-    })
-  });
+  restaurantView.handleFavorite = function() {
+    $('#restList').on('click', '#favorites', function () {
+      $(this).addClass('starred');
+      var getName = $(this).parent().parent().find('h1')[0].outerText;
 
-  restaurantView.handleListTeaser();
+      var newFav = restaurant.allRestaurants.filter(function(ele){
+        return ele.name === getName;
+      });
+
+      if(newFav){
+        favObj.favArray.push(newFav);
+        favObj.insertRecord(newFav[0]);
+        restaurantView.renderObject(newFav, '#favoritesList','#rest-template');
+        favoriteView.checkFav();
+      }
+    });
+  };
+
+  restaurantView.handleTrash();
   restaurantView.handleListDetails();
+  restaurantView.handleFavorite();
   geoLocation.getLocation();
-  favObj.getFavorites();
-  favoriteView.checkFav();
+  favObj.createTable();
+  favObj.fetchAll();
 
   module.restaurantView = restaurantView;
 })(window);
