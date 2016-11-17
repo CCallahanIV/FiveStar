@@ -61,7 +61,6 @@
             favObj.deleteRecord(slim);
           }
         });
-        console.log('end of slideUp');
       });
     });
   };
