@@ -139,7 +139,6 @@ Favorites Page Styling
   display: none;
 }
 
-
 @media only screen and (min-width: 640px) {
     .rest_details {
       display: flex;
@@ -154,4 +153,7 @@ Favorites Page Styling
       display: inline;
       width: 300px;
     }*/
+
+.starred {
+  color: red;
 }
