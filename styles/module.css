@@ -145,7 +145,10 @@ About Us Styling
 Favorites Page Styling
 ***********************/
 #clearFavorite{
-  text-align: center;
+  
+     display:block;
+     margin:0px auto;
+
   background: #e7aef5;
   background-image: -webkit-linear-gradient(top, #e7aef5, #bc6dd6);
   background-image: -moz-linear-gradient(top, #e7aef5, #bc6dd6);
