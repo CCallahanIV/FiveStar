@@ -76,12 +76,13 @@
 
   restaurantView.handleFavorite = function() {
     $('#restList').on('click', '#favorites', function () {
-      $(this).addClass('starred');
-      var getName = $(this).parent().parent().find('h1')[0].outerText;
+      if(!$(this).hasClass('starred')){
+        $(this).addClass('starred');
+        var getName = $(this).parent().parent().find('h1')[0].outerText;
 
-      var newFav = restaurant.allRestaurants.filter(function(ele){
-        return ele.name === getName;
-      });
+        var newFav = restaurant.allRestaurants.filter(function(ele){
+          return ele.name === getName;
+        });
 
       if(newFav){
         favObj.favArray.push(newFav[0]);
