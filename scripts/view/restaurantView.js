@@ -37,7 +37,12 @@
 
   restaurantView.handleTrashFav = function() {
     $('#favoritesList').on('click', '#trash_can', function() {
-      console.log($('#restList').find('.starred'));
+      var favTitle = $(this).parent().parent().find('h1')[0].outerText;
+      $('#restList').find('.starred').each(function () {
+        if (favTitle === $(this).parent().parent().find('h1')[0].outerText) {
+          $(this).parent().parent().find('.starred').removeClass('starred');
+        }
+      });
       $(this).parent().parent().parent().parent().slideUp('500ms', function() {
         console.log('start of slideUp');
         //Check for any unshown list items and toggle them to shown.
@@ -76,19 +81,20 @@
 
   restaurantView.handleFavorite = function() {
     $('#restList').on('click', '#favorites', function () {
-      if(!$(this).hasClass('starred')){
-        $(this).addClass('starred');
-        var getName = $(this).parent().parent().find('h1')[0].outerText;
+        if(!$(this).hasClass('starred')){
+          $(this).addClass('starred');
+          var getName = $(this).parent().parent().find('h1')[0].outerText;
 
-        var newFav = restaurant.allRestaurants.filter(function(ele){
-          return ele.name === getName;
-        });
+          var newFav = restaurant.allRestaurants.filter(function(ele){
+            return ele.name === getName;
+          });
 
-      if(newFav){
-        favObj.favArray.push(newFav[0]);
-        favObj.insertRecord(newFav[0]);
-        restaurantView.renderObject(newFav, '#favoritesList','#rest-template');
-        favoriteView.checkFav();
+        if(newFav){
+          favObj.favArray.push(newFav[0]);
+          favObj.insertRecord(newFav[0]);
+          restaurantView.renderObject(newFav, '#favoritesList','#rest-template');
+          favoriteView.checkFav();
+        }
       }
     });
   };
