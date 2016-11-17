@@ -35,6 +35,32 @@
     });
   };
 
+  restaurantView.handleTrashFav = function() {
+    $('#favoritesList').on('click', '#trash_can', function() {
+      console.log($('#restList').find('.starred'));
+      $(this).parent().parent().parent().parent().slideUp('500ms', function() {
+        console.log('start of slideUp');
+        //Check for any unshown list items and toggle them to shown.
+        if($(this).siblings().attr('style')){
+          $(this).siblings().fadeToggle();
+        }
+        $(this).remove('li');
+        var curTitle = $(this).find('h1')[0].outerText;
+        console.log(favObj.favArray);
+        favObj.favArray.forEach(function (obj, idx) {
+          var slim = obj.name;
+          console.log(slim);
+          if (curTitle === slim) {
+            favObj.favArray.splice(idx, idx + 1);
+            console.log('deleting record', favObj.deleteRecord);
+            favObj.deleteRecord(slim);
+          }
+        });
+        console.log('end of slideUp');
+      });
+    });
+  };
+
   restaurantView.handleListDetails = function() {
     $('.lists').on('click', '#showMore', function() {
       $(this).parent().next().addClass('openRestaurant').slideToggle('slow');
@@ -58,7 +84,7 @@
       });
 
       if(newFav){
-        favObj.favArray.push(newFav);
+        favObj.favArray.push(newFav[0]);
         favObj.insertRecord(newFav[0]);
         restaurantView.renderObject(newFav, '#favoritesList','#rest-template');
         favoriteView.checkFav();
@@ -67,6 +93,7 @@
   };
 
   restaurantView.handleTrash();
+  restaurantView.handleTrashFav();
   restaurantView.handleListDetails();
   restaurantView.handleFavorite();
   geoLocation.getLocation();

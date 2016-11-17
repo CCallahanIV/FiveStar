@@ -49,7 +49,7 @@
       [
         {
           'sql': 'DELETE FROM favorites WHERE name = ?;',
-          'data': name
+          'data': [name]
         }
       ]
     );
