@@ -2,8 +2,8 @@
   var aboutController = {};
 
   aboutController.reveal = function() {
-    console.log('reveal');
     $('#restList').hide();
+    $('#favoritesList').hide();
     $('#aboutUs').fadeIn();
   };
 

@@ -3,16 +3,6 @@
   var favObj = {};
   favObj.favArray = [];
 
-  favObj.getFavorites = function() {
-    if (localStorage.favorites) {
-      console.log('favorites exits');
-      favObj.favArray = JSON.parse(localStorage.getItem('favorites'));
-      restaurantView.renderObject(favObj.favArray, '#favoritesList', '#rest-template');
-    } else {
-      $('#favoritesList').html('No favorites');
-    }
-  };
-
   favObj.createTable = function() {
     webDB.execute(
       'CREATE TABLE IF NOT EXISTS favorites (' +
@@ -66,8 +56,6 @@
       'SELECT * FROM favorites ORDER BY rating DESC', function(rows) {
         if(rows.length){
           favObj.loadFavs(rows);
-        } else {
-          console.log("No Favorites");
         }
     });
   };

@@ -5,6 +5,7 @@
   favoriteView.checkFav = function () {
     $('#restList').children().each(function () {
       var curLi = $(this).find('.fa-star');
+      curLi.removeClass('starred');
       var curName = $(this).find('h1')[0].outerText;
       favObj.favArray.forEach(function (obj) {
         if (obj.name === curName) {
