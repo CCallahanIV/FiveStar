@@ -138,7 +138,8 @@ About Us Styling
   margin: 0 auto;
   text-align: justify;
   display: block;
-
+  height: 480px;
+  vertical-align: top;
 }
 
 .bio h2 {
