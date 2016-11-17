@@ -37,12 +37,13 @@
 
   restaurantView.handleListDetails = function() {
     $('.lists').on('click', '#showMore', function() {
-      $(this).parent().next().slideToggle('slow');
+      $(this).parent().next().addClass('openRestaurant').slideToggle('slow');
       $(this).parent().parent().siblings().fadeToggle();
       if($(this).text() === 'Show More'){
         $(this).text('Show Less');
       } else {
         $(this).text('Show More');
+        // $(this).removeClass('openRestaurant');
       }
     });
   };

@@ -37,14 +37,16 @@
           <button type="button" id="showMore">Show More</button>
 
         </div>
-          <div class="rest_details">
-            <div class="detailsWrapper">
-            Phone Number: {{display_phone}}<br>
-            Category: {{categories}}<br>
-            Description: {{snippet_text}}<br>
+          <div class="detailsContainer">
+            <div class="rest_details">
+              <div class="detailsWrapper">
+                Phone Number: {{display_phone}}<br>
+                Category: {{categories}}<br>
+                Description: {{snippet_text}}<br>
+              </div>
+              <iframe width="350" height="400" src={{map_url}}></iframe>
+            </div>
           </div>
-          <iframe width="350" height="400" src={{map_url}}></iframe>
-        </div>
       </li>
     </script>
   </head>
