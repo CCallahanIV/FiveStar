@@ -138,3 +138,6 @@ Favorites Page Styling
 #favoritesPage {
   display: none;
 }
+.starred {
+  color: red;
+}

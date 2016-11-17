@@ -53,11 +53,12 @@
           var restaurantsObjects = JSON.parse(localStorage.getItem('favorites'));
           restaurantsObjects.unshift(obj);
           localStorage.setItem('favorites', JSON.stringify(restaurantsObjects));
-          restaurantView.renderObject([obj], '#favoritesList', '#rest-template')
         } else {
           var restObj = JSON.stringify([obj]);
           localStorage.setItem('favorites', restObj)
         }
+        restaurantView.renderObject([obj], '#favoritesList', '#rest-template');
+        favObj.favArray.unshift(obj);
       }
     })
   });
@@ -66,6 +67,7 @@
   restaurantView.handleListDetails();
   geoLocation.getLocation();
   favObj.getFavorites();
+  favoriteView.checkFav();
 
   module.restaurantView = restaurantView;
 })(window);
