@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
+    <link rel="stylesheet" href="styles/loadIcon.css">
     <!-- <link rel="stylesheet" href="styles/pacman.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Josefin+Sans' rel='stylesheet' type='text/css'>
     <!-- TEMPLATE SCRIPTS HERE -->
@@ -40,9 +41,9 @@
           <div class="detailsContainer">
             <div class="rest_details">
               <div class="detailsWrapper">
-                Phone Number: {{display_phone}}<br>
-                Category: {{categories}}<br>
-                Description: {{snippet_text}}<br>
+                Phone Number: {{display_phone}}<br><br>
+                Category: {{categories}}<br><br>
+                Description: {{snippet_text}}<br><br>
               </div>
               <iframe width="350" height="400" src={{map_url}}></iframe>
             </div>
@@ -75,6 +76,15 @@
     <main>
 
       <ul id="restList" class="lists"></ul>
+
+      <!-- Start Loading Icon -->
+
+      <div class="loading">
+        <div class="bullet"></div>
+        <div class="bullet"></div>
+        <div class="bullet"></div>
+        <div class="bullet"></div>
+      </div>
 
       <!-- START ABOUT PAGE -->
 

@@ -53,6 +53,8 @@ div.detailsWrapper{
   width: 100%;
   max-width: 500px;
   margin: auto;
+  font-size: 25px;
+  padding: 10px;
 }
 
 .storeLink{
