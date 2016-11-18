@@ -212,6 +212,12 @@ Favorites Page Styling
   display: none;
 }
 
+@media only screen and (min-width: 500px) {
+  #restList .contentWrapper, #favoritesList .contentWrapper {
+    width: 300px;
+  }
+}
+
 @media only screen and (min-width: 600px) {
     .rest_details {
       display: flex;

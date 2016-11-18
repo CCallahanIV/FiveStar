@@ -4,6 +4,7 @@
   restaurantController.reveal = function() {
     $('#aboutUs').hide();
     $('#favoritesPage').hide();
+    $('.loading').hide();
     $('#restList').fadeIn();
   };
 

@@ -3,7 +3,7 @@
 
   aboutController.reveal = function() {
     $('#restList').hide();
-    $('#favoritesList').hide();
+    $('#favoritesPage').hide();
     $('.loading').hide();
     $('#aboutUs').fadeIn();
   };
