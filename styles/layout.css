@@ -55,6 +55,11 @@ main {
   z-index:1;
 }
 
+#fiveStar {
+  display: block;
+  margin: auto;
+}
+
 .sky {
   height: 480px;
   background: #007fd5;
