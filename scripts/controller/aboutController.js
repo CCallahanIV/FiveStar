@@ -4,6 +4,7 @@
   aboutController.reveal = function() {
     $('#restList').hide();
     $('#favoritesList').hide();
+    $('.loading').hide();
     $('#aboutUs').fadeIn();
   };
 

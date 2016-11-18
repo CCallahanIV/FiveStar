@@ -4,6 +4,7 @@
   pigFindController.reveal = function() {
     $('#aboutUs').hide();
     $('#restList').hide();
+    $('.loading').hide();
     $('#favoritesPage').fadeIn();
   };
 
