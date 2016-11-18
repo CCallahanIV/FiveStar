@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
-    <!-- <link rel="stylesheet" href="styles/pacman.css"> -->
+    <link rel="stylesheet" href="styles/loadIcon.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Josefin+Sans' rel='stylesheet' type='text/css'>
     <!-- TEMPLATE SCRIPTS HERE -->
 
@@ -41,9 +41,9 @@
           <div class="detailsContainer">
             <div class="rest_details">
               <div class="detailsWrapper">
-                Phone Number: {{display_phone}}<br>
-                Category: {{categories}}<br>
-                Description: {{snippet_text}}<br>
+                Phone Number: {{display_phone}}<br><br>
+                Category: {{categories}}<br><br>
+                Description: {{snippet_text}}<br><br>
               </div>
               <iframe width="350" height="400" src={{map_url}}></iframe>
             </div>
@@ -77,32 +77,42 @@
 
       <ul id="restList" class="lists"></ul>
 
+      <!-- Start Loading Icon -->
+
+      <div class="loading">
+        <div class="bullet"></div>
+        <div class="bullet"></div>
+        <div class="bullet"></div>
+        <div class="bullet"></div>
+      </div>
+
       <!-- START ABOUT PAGE -->
 
       <div id="aboutUs">
 
         <h1>About Us</h1>
-
+        <div class="aboutContainer">
+          <section class="bio">
+            <img src="image/andrew.jpg">
+            <h2>Andrew Shumway</h2>
+            <p>I have lived in the Seattle area my entire life, attending a cummunity college north of the city. After getting an Associate in Fine Arts Degree I decided against continuing with pursuing a 4 year degree. Instead I pursued career possibilities in Real Estate. Though I had chosen to not pursue a traditional schooling experience in favor of work, I continued to pursue alternative educational avenues in my free time - Chief among them being web developemnet.</p>
+          </section>
+          <section class="bio">
+            <img src="image/reggie.png">
+            <h2>Reginal Grant</h2>
+            <p>As a old coding Sensei at the prime age of 46, I have journeyed far to find the tools necessary to create the ultimate code. If you are interested to see how this web page was created please visit my GitHub.</p>
+          </section>
         <section class="bio">
-          <img src="http://placehold.it/250x250">
-          <h2>Name</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <img src="image/ted.jpg">
+          <h2>Ted Callahan</h2>
+          <p>I am a lapsed Mechanical Engineer pursuing a new start in the tech industry as a means to find new purpose, fresh challenges and creative outlets.  My wife and I live with our frenzied pup, Addie in the Pinehurst neighborhood of North Seattle.  If I'm not skiing, I'm probably fixing my car, or sampling a craft brew.  Or some horrifying combination of all three.  I'm looking forward the Python 401 class!</p>
         </section>
         <section class="bio">
-          <img src="http://placehold.it/250x250">
-          <h2>Name</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <img src="image/amos.png">
+          <h2>Amos Bolder</h2>
+          <p>My Name is Amos Boldor and I love Code Fellows. I started getting into coding in highschool when I took a python class, I was immediately in love with coding. After highschool I spent one year touring Israel and just enjoying life before responsibilitieshit me. A couple months after that I found code fellows and my life got a little brighter. I would very much like to be a backend developer and code 401 will help me achieve that.</p>
         </section>
-        <section class="bio">
-          <img src="http://placehold.it/250x250">
-          <h2>Name</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </section>
-        <section class="bio">
-          <img src="http://placehold.it/250x250">
-          <h2>Name</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </section>
+      </div>
 
       </div>
 

@@ -13,7 +13,7 @@ iframe {
   display: flex;
   justify-content: space-around;
   height: 100px;
-  font-family: Josefin sans;
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
 }
 .flex-container div {
@@ -53,6 +53,8 @@ div.detailsWrapper{
   width: 100%;
   max-width: 500px;
   margin: auto;
+  font-size: 25px;
+  padding: 10px;
 }
 
 .storeLink{
@@ -118,28 +120,60 @@ About Us Styling
 
 #aboutUs {
   display: none;
+  color: white;
+  background-color: rgba(0,0,0,0.50);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 #aboutUs h1 {
  font-weight: bold;
  font-size: 40px;
+ color: #fff;
+ text-align: center;
+ padding: 20px;
 }
 
 .bio {
-  width: 250;
-  margin: 20px auto;
-  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  text-align: justify;
+  display: block;
+  height: 480px;
+  vertical-align: top;
 }
 
 .bio h2 {
   font-size: 20px;
   padding: 10px;
   font-weight: bold;
+  text-align: center;
 }
 
 .bio p {
   padding: 10px;
 }
+
+.bio img {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+   .bio {
+     padding: 20px;
+   }
+ }
+
+ @media only screen and (min-width: 925px) {
+ .bio {
+    display: inline-block;
+  }
+
+}
+
 
 /***********************
 Favorites Page Styling
@@ -178,7 +212,7 @@ Favorites Page Styling
   display: none;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 600px) {
     .rest_details {
       display: flex;
       justify-content: space-around;

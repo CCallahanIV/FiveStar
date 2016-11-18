@@ -10,6 +10,8 @@
     $.get('/requestYelpRestaurants', restaurant.queryParams, function(data){
       restaurant.allRestaurants = data;
       restaurant.formatRestaurants();
+    }).done(function(){
+      $('.loading').hide();
     });
   };
 

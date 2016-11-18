@@ -1,0 +1,84 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  position: relative;
+}
+
+@-webkit-keyframes animIn {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0
+    }
+}
+
+.loading {
+  margin-top: 22%
+}
+
+@keyframes animIn {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0
+    }
+}
+
+.loading {
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 50%
+}
+
+.loading .bullet {
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-animation: animIn .65s ease-in-out 0s infinite;
+    animation: animIn .65s ease-in-out 0s infinite
+}
+
+.loading .bullet:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s
+}
+
+.loading .bullet:nth-child(2) {
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s
+}
+
+.loading .bullet:nth-child(3) {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s
+}
+
+.loading .bullet:nth-child(4) {
+    -webkit-animation-delay: .45s;
+    animation-delay: .45s
+}
