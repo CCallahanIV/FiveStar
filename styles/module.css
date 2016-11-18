@@ -239,3 +239,11 @@ Favorites Page Styling
 .starred {
   color: red;
 }
+
+.seeMore {
+  text-decoration: underline;
+}
+
+.seeMore:hover {
+  color: #ffb380;
+}
