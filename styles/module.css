@@ -158,16 +158,17 @@ About Us Styling
 }
 
 .bio img {
-  display: block;
+   margin: auto;
+   display: block;
    width: 250px;
    border: #2196F3;
    border-style: groove;
+ }
 
 @media only screen and (min-width: 600px) {
    .bio {
      padding: 20px;
    }
- }
 
  @media only screen and (min-width: 925px) {
  .bio {
