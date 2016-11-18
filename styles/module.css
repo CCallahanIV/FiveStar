@@ -37,6 +37,8 @@ iframe {
   top: 12px;
   border-radius: 50%;
   transition: border-radius 250ms;
+  border: #2196F3;
+  border-style: groove;
 }
 
 .restImage:hover {
@@ -157,9 +159,9 @@ About Us Styling
 
 .bio img {
   display: block;
-  width: 250px;
-  margin: 0 auto;
-}
+   width: 250px;
+   border: #2196F3;
+   border-style: groove;
 
 @media only screen and (min-width: 600px) {
    .bio {
